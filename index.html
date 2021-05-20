@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <script>
+            const QUOTEBANK = [
+                {
+                    quote: "I still believe we can live forever, you and I we begin forever now, forever now.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "Sing to me the song of the stars, Of Your galaxy dancing, and laughing, and laughing again.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "I am the battle line. I am the war I fight.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "The sickness is myself.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "Breathe it in and let it go, every breath you take is not yours to own, it's not yours to hold.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "This ain't my American dream, I want to live and die for bigger things, I'm tired of fighting for just me, This ain't my American dream.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "When success is equated with excess The ambition for excess wrecks us",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "When I look at the stars, I feel like myself.",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "We were meant to live for so much more, have we lost ourselves?",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "In this needle and haystack life, I found miracles there in your eyes, It's no accident we're here tonight, We are once in a lifetime",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "Hallelujah, every breath is a second chance",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "I dare you to move, Like today never happened,Today never happened before",
+                    author: "Switchfoot"
+                } ,
+                {
+                    quote: "Where can you run to escape from yourself? Where you gonna go? Where you gonna go? Salvation is here.",
+                    author: "Switchfoot"
+                }
+            ];
+
+            window.onload = bean;
+            function bean() {
+                generateQuote()
+            }
+            function generateQuote(){
+                let quoteSize = QUOTEBANK.length;
+                
+                let randomIndex = Math.floor(Math.random() * quoteSize);
+                
+                let randomQuoteData = QUOTEBANK [randomIndex];
+                
+
+                /*
+                //if you uncomment this block of code, it breaks the page. when testing on my machine, I have found that when clicking on the tweet quote button, instead of going to any version of the link I am trying to build below, it tries to go to: file:///C:/Users/username/Documents/Free%20Code%20Camp/randomQuoteMachine/twitterLink . I'm confused on the code's logic to go to that "link" instead of what I have defined below. Also rather confused why it breaks the display of the quote when this code is uncommented. I am following https://youtu.be/pbWHp63-V3c?t=2568 to build this app. Any help would be much appreciated!!!
+
+                let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&amp;related=freecodecamp&amp;";
+                
+                // Add Quote
+                let quoteInApiFormat = randomQuoteData.quote.replace(/ /g, "%20");
+                
+                twitterLink += quoteInApiFormat;
+
+                //Add Author
+                let authorInApiFormat = randomQuoteData.author.replace(/ /g, "%20");
+                
+                twitterLink += authorInApiFormat;
+                
+                document.getElementByID("tweet-quote").href = twitterLink;
+                
+
+
+                document.getElementById("text").innerText = randomQuoteData.quote;
+
+                document.getElementById("author").innerText = randomQuoteData.author;
+                */
+                 
+
+            }
+        </script>
+        <style>
+            *{font-size: 2rem;}
+        </style>
+    </head>
+
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <wrapper id="quote-box">
+            <div id="text">
+
+            </div>
+            <div id="author">
+                
+            </div>
+            <button id="new-quote" onClick="generateQuote();">
+                New Quote
+            </button>
+            <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
+        </wrapper>
+        
+    </body>
+</html>
