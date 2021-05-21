@@ -61,6 +61,8 @@
                 generateQuote()
             }
             function generateQuote(){
+                
+                //Quotebank
                 let quoteSize = QUOTEBANK.length;
                 
                 let randomIndex = Math.floor(Math.random() * quoteSize);
@@ -68,30 +70,29 @@
                 let randomQuoteData = QUOTEBANK [randomIndex];
                 
 
-                /*
-                //if you uncomment this block of code, it breaks the page. when testing on my machine, I have found that when clicking on the tweet quote button, instead of going to any version of the link I am trying to build below, it tries to go to: file:///C:/Users/username/Documents/Free%20Code%20Camp/randomQuoteMachine/twitterLink . I'm confused on the code's logic to go to that "link" instead of what I have defined below. Also rather confused why it breaks the display of the quote when this code is uncommented. I am following https://youtu.be/pbWHp63-V3c?t=2568 to build this app. Any help would be much appreciated!!!
+                
 
+                //Building Twitter link
                 let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&amp;related=freecodecamp&amp;";
                 
                 // Add Quote
-                let quoteInApiFormat = randomQuoteData.quote.replace(/ /g, "%20");
+                let quoteInApiFormat = randomQuoteData.quote.replace(/ /g,"%20");
                 
                 twitterLink += quoteInApiFormat;
 
                 //Add Author
-                let authorInApiFormat = randomQuoteData.author.replace(/ /g, "%20");
+                let authorInApiFormat = randomQuoteData.author.replace(/ /g,"%20");
                 
                 twitterLink += authorInApiFormat;
                 
-                document.getElementByID("tweet-quote").href = twitterLink;
+                document.getElementById("tweet-quote").href = twitterLink;
                 
 
 
                 document.getElementById("text").innerText = randomQuoteData.quote;
 
                 document.getElementById("author").innerText = randomQuoteData.author;
-                */
-                 
+                
 
             }
         </script>
@@ -112,7 +113,7 @@
             <button id="new-quote" onClick="generateQuote();">
                 New Quote
             </button>
-            <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
+                <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
         </wrapper>
         
     </body>
