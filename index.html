@@ -1,5 +1,14 @@
-<html>
-    <head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <title>Switchfoot Random Quote Generator</title>
+
         <script>
             const QUOTEBANK = [
                 {
@@ -73,7 +82,7 @@
                 
 
                 //Building Twitter link
-                let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&amp;related=freecodecamp&amp;";
+                let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&text=";
                 
                 // Add Quote
                 let quoteInApiFormat = randomQuoteData.quote.replace(/ /g,"%20");
@@ -83,7 +92,7 @@
                 //Add Author
                 let authorInApiFormat = randomQuoteData.author.replace(/ /g,"%20");
                 
-                twitterLink += authorInApiFormat;
+                twitterLink += " - " + authorInApiFormat;
                 
                 document.getElementById("tweet-quote").href = twitterLink;
                 
@@ -96,25 +105,35 @@
 
             }
         </script>
-        <style>
-            *{font-size: 2rem;}
-        </style>
+
     </head>
 
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-        <wrapper id="quote-box">
-            <div id="text">
-
-            </div>
-            <div id="author">
-                
-            </div>
-            <button id="new-quote" onClick="generateQuote();">
-                New Quote
-            </button>
-                <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
-        </wrapper>
         
+        <div class="card" class="mx-auto" style="width: 75%;">
+            <div class="card-header">
+                Switchfoot Quote Generator
+            </div>
+            <div class="card-body" class="col-md-5 offset-md-2">      
+                <wrapper id="quote-box">
+                    <blockquote class="blockquote mb-0">
+                        <p id="text">
+                        </p>
+                        <footer class="blockquote-footer"id="author">
+                        <footer>
+                    </blockquote>
+                    <button id="new-quote" onClick="generateQuote();" type="button" class="btn btn-dark">
+                        New Quote
+                    </button>
+                    <button type="button" class="btn btn-info">
+                        <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
+                    </button>
+                </wrapper>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
