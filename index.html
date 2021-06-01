@@ -110,26 +110,31 @@
 
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-        
-        <div class="card" class="mx-auto" style="width: 75%;">
-            <div class="card-header">
-                Switchfoot Quote Generator
-            </div>
-            <div class="card-body" class="col-md-5 offset-md-2">      
-                <wrapper id="quote-box">
-                    <blockquote class="blockquote mb-0">
-                        <p id="text">
-                        </p>
-                        <footer class="blockquote-footer"id="author">
-                        <footer>
-                    </blockquote>
-                    <button id="new-quote" onClick="generateQuote();" type="button" class="btn btn-dark">
-                        New Quote
-                    </button>
-                    <button type="button" class="btn btn-info">
-                        <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
-                    </button>
-                </wrapper>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-10 offset-md-2">
+                    <wrapper id="quote-box">
+                        <div class="card" class="mx-auto" style="width: 75%;">
+                            <div class="card-header">
+                                Switchfoot Quote Generator
+                            </div>
+                            <div class="card-body">      
+                                <blockquote class="blockquote mb-0">
+                                    <p id="text">
+                                    </p>
+                                    <footer class="blockquote-footer"id="author">
+                                    <footer>
+                                </blockquote>
+                                <button id="new-quote" onClick="generateQuote();" type="button" class="btn btn-dark">
+                                    New Quote
+                                </button>
+                                <button type="button" class="btn btn-info">
+                                    <a href= "twitterLink" id="tweet-quote" target= "_blank">Tweet Quote</a>
+                                </button>
+                            </div>
+                        </wrapper>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
